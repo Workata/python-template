@@ -1,0 +1,8 @@
+# compose for app deployment
+
+services:
+  app-name-service:
+    container_name: app-name-container
+    build: ./
+    env_file:
+      - .env
