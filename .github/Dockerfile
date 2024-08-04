@@ -11,4 +11,6 @@ COPY requirements/ requirements/
 RUN pip install --upgrade pip
 RUN pip3 install -r requirements/dev.txt
 
+# * copy source and configs
 COPY ./src ./src
+COPY pyproject.toml .
