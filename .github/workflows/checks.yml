@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: build and run compose for testing
-      run: docker-compose -f $DEVCONTAINER_COMPOSE_PATH up -d
+      run: docker compose -f $DEVCONTAINER_COMPOSE_PATH up -d
 
     - name: check formatting (ruff)
       run: $EXECUTE_IN_CONTAINER ruff format --check
@@ -39,4 +39,4 @@ jobs:
       run: $EXECUTE_IN_CONTAINER coverage report -m
 
     - name: Down compose
-      run: docker-compose -f $DEVCONTAINER_COMPOSE_PATH down
+      run: docker compose -f $DEVCONTAINER_COMPOSE_PATH down
