@@ -1,10 +1,9 @@
 # compose for CI/CD
 
-version: '3.8'
-
 services:
   app-name:
     build:
-      context: .
+      context: ..
+      dockerfile: .github/Dockerfile
     tty: true   # * will keep container running so we can execute commands on it -- this is needed for testing in pipeline
     container_name: app-name-container

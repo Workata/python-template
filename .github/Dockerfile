@@ -10,6 +10,3 @@ WORKDIR /workspace
 COPY requirements/ requirements/
 RUN pip install --upgrade pip
 RUN pip3 install -r requirements/dev.txt
-
-COPY ./src ./
-CMD ["python", "./main.py"]

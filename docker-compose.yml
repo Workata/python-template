@@ -1,7 +1,5 @@
 # compose for app deployment
 
-version: "3.8"
-
 services:
   app-name-service:
     container_name: app-name-container
