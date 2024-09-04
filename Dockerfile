@@ -11,5 +11,5 @@ COPY requirements/ requirements/
 RUN pip install --upgrade pip
 RUN pip3 install -r requirements/prod.txt
 
-COPY ./src ./
+COPY ./app_name ./
 CMD ["python", "./main.py"]

@@ -1,8 +1,8 @@
 # run checks and potentialy fix them
 
 echo "Check typing with mypy..."
-echo "mypy ./src/"
-mypy ./src/
+echo "mypy ."
+mypy .
 
 echo "Format with ruff..."
 echo "ruff format"

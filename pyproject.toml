@@ -1,20 +1,18 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
-name = "app-name"
+name = "app_name"
 description = "Python project template"
 
 version = "1.0.0" 
 
 readme = "README.md"
-license = {file = "LICENSE.txt"}
+license = {file = "LICENSE"}
 
 requires-python = ">=3.8"
-dependencies = [
-  ""
-]
+dynamic = ["dependencies", "optional-dependencies"]   # generated based on requirements folder
 
 keywords = ["sample", "development"]
 
@@ -52,6 +50,14 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
 ]
 
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements/base.txt"]
+
+[tool.hatch.metadata.hooks.requirements_txt.optional-dependencies]
+dev = ["requirements/dev.txt"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app_name"]
 
 ####################################################### mypy #########################################################
 
@@ -67,7 +73,7 @@ warn_unused_ignores = true
 no_implicit_optional = true
 show_error_codes = true
 
-exclude = ['src/tests/']
+exclude = ['app_name/tests/']
 
 ####################################################### ruff #########################################################
 
@@ -117,7 +123,6 @@ quote-style = "double"
 ####################################################### pytest #########################################################
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = "./src/"
 
 
 ####################################################### coveragepy #########################################################

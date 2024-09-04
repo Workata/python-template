@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from main import main
+from app_name.main import main
 
 
 @patch("builtins.print")
