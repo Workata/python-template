@@ -3,7 +3,8 @@ Simple template for python project
 
 ## Checklist
 
-- [ ] Find and replace all occurrences of 'app-name' to your project name phrase.
+- [ ] Find and replace all occurrences of 'app_name' to your project slug and 'app-name' to your project name.
+- [ ] Change project folder name from 'app_name' to your project slug.
 - [ ] Open `pyproject.toml` and update information about the project like authors, description etc.
 
 
@@ -33,7 +34,7 @@ pip install -r requirements/dev.txt
 ### Static checks and unit tests
 Run unit tests
 ```sh
-pytest ./src/
+pytest .
 ```
 
 Run unit tests and check coverage
