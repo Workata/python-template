@@ -3,8 +3,8 @@ Simple template for python project
 
 ## Checklist
 
-- [ ] Find and replace all occurrences of 'app_name' to your project slug and 'app-name' to your project name.
 - [ ] Change project folder name from 'app_name' to your project slug.
+- [ ] Find and replace all occurrences of 'app_name' to your project slug and 'app-name' to project name.
 - [ ] Open `pyproject.toml` and update information about the project like authors, description etc.
 
 
